@@ -27,7 +27,7 @@ export default
     },
     data(){
         return{
-            todo:[]
+            todo:['Kang the Conquerer','Antman is Funny']
         }
     }
 }

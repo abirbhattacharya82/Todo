@@ -7,7 +7,7 @@
 <style>
     .Title
     {
-        font-size: 150%;
+        font-size: 200%;
         width: 100%;
         text-align: center;
     }

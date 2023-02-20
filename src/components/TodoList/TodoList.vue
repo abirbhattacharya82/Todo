@@ -1,6 +1,6 @@
 <template>
     <div class="List">
-        {{ todo_list[0] }}
+        <div class="Items" v-for="(item,index) in todo_list" :key="index" :id="'item-' + index">{{ item }}</div>
     </div>
 </template>
 
@@ -14,3 +14,14 @@ export default
     }
 }
 </script>
+
+<style>
+.List
+{
+    text-align: center;
+}
+.List .Items
+{
+    font-size: 120%;
+}
+</style>
