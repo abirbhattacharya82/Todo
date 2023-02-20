@@ -1,6 +1,6 @@
 <template>
     <div class="List">
-        <div class="Items" v-for="(item,index) in todo_list" :key="index" :id="'item-' + index">{{ item }}</div>
+        <div class="Items" v-for="(item,index) in todo_list" :key="index" :id="'item-' + index"  @click="strike('item-' + index)">{{ item }}</div>
     </div>
 </template>
 
@@ -11,6 +11,12 @@ export default
     props:
     {
         todo_list:Array
+    },
+    methods:{
+        strike(divId)
+        {
+            document.getElementById(divId).style.textDecoration = 'line-through';
+        }
     }
 }
 </script>
