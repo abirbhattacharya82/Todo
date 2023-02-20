@@ -17,8 +17,7 @@ export default {
 #app {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  margin-top: 5%;
   width: 100%;
 }
 </style>

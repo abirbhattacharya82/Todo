@@ -3,10 +3,10 @@
         <Title></Title>
         <TodoList v-bind:todo_list=todo />
         <div class="Button_area">
-            <button>Clear All</button>
+            <button @click="clearAll()">Clear All</button>
         </div>
         <div class="NewTodo">
-            <input type="text"> <button>Add</button>
+            <input type="text" id="new_task"> <button @click="addtask()">Add</button>
         </div>
         <InstructionList />
     </div>
@@ -27,7 +27,19 @@ export default
     },
     data(){
         return{
-            todo:['Kang the Conquerer','Antman is Funny']
+            todo:[]
+        }
+    },
+    methods:{
+        addtask()
+        {
+            var new_task=document.getElementById('new_task').value;
+            this.todo.push(''+new_task);
+            document.getElementById('new_task').value="";
+        },
+        clearAll()
+        {
+            this.todo=[];
         }
     }
 }
