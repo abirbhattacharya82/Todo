@@ -1,6 +1,6 @@
 <template>
     <div class="List">
-        {{ todo_list }}
+        {{ todo_list[0] }}
     </div>
 </template>
 
